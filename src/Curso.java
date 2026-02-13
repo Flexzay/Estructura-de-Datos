@@ -87,12 +87,13 @@ public class Curso {
 
         for(Estudiante e: listaEstudiantes){
             if ( e.getNota() < 3.0){
-                System.out.println(e + "-> Perdio la nota ");
+                System.out.println(e + "-> Perdio la materia");
             }
         }
 
         
     }
 
-    
+    // metodo para ayudar si la nota es de 0 a 2.5 sumar +1   de 2.6  y 4.0 suma 0.8  y si s de 4.1 sumar 0.5 
+    // pero si su nota es 5.0  dejar en 5 
 }
