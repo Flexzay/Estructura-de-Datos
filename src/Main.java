@@ -12,7 +12,10 @@ public class Main {
             System.out.println("1. Inscribir Estudiante");
             System.out.println("2. Mostrar Estudiantes");
             System.out.println("3. Calcular Promedio");
-            System.out.println("4. Salir");
+            System.out.println("4. Calcular Mayor Nota");
+            System.out.println("5. Calcular Menor Nota");
+            System.out.println("6. Mostrar reprobados");
+            System.out.println("7. Salir");
             System.out.print("Seleccione una opción: ");
             
             opcion = scanner.nextInt();
@@ -39,6 +42,15 @@ public class Main {
                     curso.calcularPromedio();
                     break;
                 case 4:
+                    curso.mayorNota();
+                    break;
+                case 5:
+                    curso.menorNota();
+                    break;
+                case 6:
+                    curso.reprobados();
+                    break;
+                case 7:
                     System.out.println("Saliendo del sistema...");
                     break;
                 default:

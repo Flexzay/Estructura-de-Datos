@@ -42,4 +42,57 @@ public class Curso {
         double promedio = suma / listaEstudiantes.size();
         System.out.printf("-> El promedio del curso es: %.2f%n", promedio);
     }
+
+    // Metodo para sacar mayor nota
+
+    public void mayorNota(){
+        if (listaEstudiantes.isEmpty()){
+             System.out.println("-> No hay notas.");
+            return;
+        }
+        
+        Estudiante mejorEstudiante = listaEstudiantes.get(0);
+
+        for(Estudiante e: listaEstudiantes){
+            if(e.getNota() > mejorEstudiante.getNota()){
+                mejorEstudiante = e;
+            }
+        }
+        System.out.println("-> Estudiante con mejor nota es: " + mejorEstudiante.toString());
+    }
+
+    //Metodo para calcular la menor nota
+    public void menorNota(){
+        if (listaEstudiantes.isEmpty()){
+             System.out.println("-> No hay notas.");
+            return;
+        }
+        
+        Estudiante peorEstudiante = listaEstudiantes.get(0);
+
+        for(Estudiante e: listaEstudiantes){
+            if(e.getNota() < peorEstudiante.getNota()){
+                peorEstudiante = e;
+            }
+        }
+        System.out.println("-> Estudiante con menor nota es: " + peorEstudiante.toString());
+    }
+
+    public void reprobados (){
+         if (listaEstudiantes.isEmpty()){
+             System.out.println("-> No hay notas.");
+            return;
+        }
+        
+
+        for(Estudiante e: listaEstudiantes){
+            if ( e.getNota() < 3.0){
+                System.out.println(e + "-> Perdio la nota ");
+            }
+        }
+
+        
+    }
+
+    
 }
